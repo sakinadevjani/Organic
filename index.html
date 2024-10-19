@@ -1,0 +1,1262 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body class="vh-100">
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <defs>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="delivery" viewBox="0 0 32 32">
+        <path fill="currentColor"
+          d="m29.92 16.61l-3-7A1 1 0 0 0 26 9h-3V7a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v17a1 1 0 0 0 1 1h2.14a4 4 0 0 0 7.72 0h6.28a4 4 0 0 0 7.72 0H29a1 1 0 0 0 1-1v-7a1 1 0 0 0-.08-.39M23 11h2.34l2.14 5H23ZM9 26a2 2 0 1 1 2-2a2 2 0 0 1-2 2m10.14-3h-6.28a4 4 0 0 0-7.72 0H4V8h17v12.56A4 4 0 0 0 19.14 23M23 26a2 2 0 1 1 2-2a2 2 0 0 1-2 2m5-3h-1.14A4 4 0 0 0 23 20v-2h5Z" />
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="organic" viewBox="0 0 24 24">
+        <path fill="currentColor"
+          d="M0 2.84c1.402 2.71 1.445 5.241 2.977 10.4c1.855 5.341 8.703 5.701 9.21 5.711c.46.726 1.513 1.704 3.926 2.21l.268-1.272c-2.082-.436-2.844-1.239-3.106-1.68l-.005.006c.087-.484 1.523-5.377-1.323-9.352C7.182 3.583 0 2.84 0 2.84m24 .84c-3.898.611-4.293-.92-11.473 3.093a11.879 11.879 0 0 1 2.625 10.05c3.723-1.486 5.166-3.976 5.606-6.466c0 0 1.27-4.716 3.242-6.677M12.527 6.773l-.002-.002v.004zM2.643 5.22s5.422 1.426 8.543 11.543c-2.945-.889-4.203-3.796-4.63-5.168h.006a15.863 15.863 0 0 0-3.92-6.375z" />
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="fresh" viewBox="0 0 24 24">
+        <g fill="none">
+          <path
+            d="M24 0v24H0V0zM12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036c-.01-.003-.019 0-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z" />
+          <path fill="currentColor"
+            d="M20 9a1 1 0 0 1 1 1v1a8 8 0 0 1-8 8H9.414l.793.793a1 1 0 0 1-1.414 1.414l-2.496-2.496a.997.997 0 0 1-.287-.567L6 17.991a.996.996 0 0 1 .237-.638l.056-.06l2.5-2.5a1 1 0 0 1 1.414 1.414L9.414 17H13a6 6 0 0 0 6-6v-1a1 1 0 0 1 1-1m-4.793-6.207l2.5 2.5a1 1 0 0 1 0 1.414l-2.5 2.5a1 1 0 1 1-1.414-1.414L14.586 7H11a6 6 0 0 0-6 6v1a1 1 0 1 1-2 0v-1a8 8 0 0 1 8-8h3.586l-.793-.793a1 1 0 0 1 1.414-1.414" />
+        </g>
+      </symbol>
+    </defs>
+  </svg>
+
+  <nav class="navbar bg-body-tertiary fixed-top">
+    <div class="main">
+      <div class="top">
+
+        <img src="Images/organic logo.svg" style="padding-top: 1.5vh;">
+
+      </div>
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" id="menu"></span>
+        </button>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Fruits and Vegetables</a>
+              </li>
+              <li class="nav-item">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Dairy amd Eggs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Meat and Poultry</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Seafood</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Bakery and Bread</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Canned Goods</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Frozen Foods</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Pasta and Rice</a>
+              </li>
+              </li>
+              <a class="nav-link active" aria-current="page" href="#">Breakfast Foods</a>
+              </li>
+              </li>
+              <a class="nav-link active" aria-current="page" href="#">Snacks and Chips</a>
+              </li>
+              <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Beverages
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Water</a></li>
+                <li><a class="dropdown-item" href="#">Juice</a></li>
+                <li><a class="dropdown-item" href="#">Soda</a></li>
+                <li><a class="dropdown-item" href="#">Tea</a></li>
+              </ul>
+              <a class="nav-link active" aria-current="page" href="#">Spices and Seasonings</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Baby Food and Formula</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Health and Wellness</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Household Supplies</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Personal Care</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Pet Food and Supplies</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="dropdown">
+        <select class="form-select border-0 bg-transparent">
+          <option>All Categories</option>
+          <option>Groceries</option>
+          <option>Drinks</option>
+          <option>Chocolates</option>
+        </select>
+
+        <input type="text" name="search" id="search" placeholder="Search more than 20,000">
+
+        <i class="fa-solid fa-magnifying-glass" style="color: #ada2a2;"></i>
+      </div>
+      <div class="after">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">HOME</a>
+        </li>
+
+        <a id="dropdown2" class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          PAGES
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">ABOUT US</a></li>
+          <li><a class="dropdown-item" href="#">SHOP</a></li>
+          <li><a class="dropdown-item" href="#">SINGLE PRODUCT</a></li>
+          <li><a class="dropdown-item" href="#">CART</a></li>
+          <li><a class="dropdown-item" href="#">CHECK OUT</a></li>
+          <li><a class="dropdown-item" href="#">BLOG</a></li>
+          <li><a class="dropdown-item" href="#">SINGLE POST</a></li>
+          <li><a class="dropdown-item" href="#">STYLES</a></li>
+          <li><a class="dropdown-item" href="#">CONTACT</a></li>
+          <li><a class="dropdown-item" href="#">THANK YOU</a></li>
+          <li><a class="dropdown-item" href="#">MY CONTACT</a></li>
+          <li><a class="dropdown-item" href="#">404 ERROR</a></li>
+        </ul>
+
+
+      </div>
+      <div class="im-icon">
+        <i class="fa-regular fa-circle-user" id="main1"></i>
+        <i class="fa-regular fa-bookmark" id="main2"></i>
+
+
+
+
+
+        <!-- extra work starts from here -->
+
+        <div class="container">
+          <button id="bag" class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bag-shopping"></i>
+          </button>
+          <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasNavbar2"
+            aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header ">
+              <h4 class="offcanvas-title" id="offcanvasNavbarLabel">Your Cart</h4>
+              <span class="badge bg-#6bb252 " id="badge">3</span>
+              <button type="button" class="btn-close " data-bs-dismiss="offcanvas" aria-label="Close"
+                style="margin-bottom: 11vh;" style="margin-right: auto;"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3" id="box-1">
+
+                <h6 class="box1">Growers cider<span style="padding-left: 13vw;">12$</span></h6>
+                <p>Brief description</p>
+
+                <h6 class="box1">Fresh grapes<span style="padding-left: 14vw;">8$</span></h6>
+                <p>Brief description</p>
+
+                <h6 class="box1">Heinz tomato ketchup<span style="padding-left: 8vw;">5$</span></h6>
+                <p>Brief description</p>
+
+                <p class="box1" id="para">Total (USD)<span style="padding-left: 14.75vw;">20$</span></p>
+
+              </ul>
+
+              <div class="d-grid gap-2" id="button1">
+                <button id="actual" class="btn btn-success" type="button">Continue to checkout</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- extra work ends here -->
+
+
+
+
+
+
+  </nav>
+
+  <div class="img">
+    <!-- <img src="images/main-image.jpg"> -->
+    <div class="img-text">
+      <p class="paragraph-main">
+        <span class="span1">Organic</span> Foods<br><span class="span3">at your </span><br> <span
+          class="span4">Doorsteps</span>
+      </p>
+      <p class="paragraph-1">Dignissim massa diam elementum.</p>
+
+      <button type="button" class="btn btn-success btn-lg" id="actual2">Start Shopping</button>
+      <button type="button" class="btn btn-dark btn-lg" id="actual3">Join Now</button>
+
+      <div class="offer pl-0">
+
+        <div class="offer1 pt-5">
+          <span>14k+</span>
+          <p class="text fs-4 fw-normal">Product<br>Varieties</p>
+        </div>
+
+        <div class="offer1 p-5 pt-5">
+          <span>50k+</span>
+          <p class="text fs-4 fw-normal">Happy<br>Customers</p>
+        </div>
+
+        <div class="offer1 pt-5" id="offer1">
+          <span>10k+</span>
+          <p class="text fs-4 fw-normal">Store Locations</p>
+        </div>
+
+      </div>
+
+      <!-- cards -->
+      <div class="cards">
+
+        <div class="card">
+          <div id="c1" class="card-body">
+            <svg class="child1" width="60" height="60">
+              <use xlink:href="#organic"></use>
+            </svg>
+            <div class="card-child2">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-p fs-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo a reprehenderit
+                veritatis.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div id="c2" class="card-body">
+            <svg class="child1" width="60" height="60">
+              <use xlink:href="#fresh"></use>
+            </svg>
+            <div class="card-child2">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-p fs-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo a reprehenderit
+                veritatis.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div id="c3" class="card-body">
+            <svg class="child1" width="60" height="60">
+              <use xlink:href="#delivery"></use>
+            </svg>
+            <div class="card-child2">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-p fs-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo a reprehenderit
+                veritatis.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- owl-carousel started -->
+    <div class="space">
+      <div class="header-container">
+        <h1 class="Category">Category</h1>
+        <button type="button" class="btn btn-success btn-set">View All</button>
+        <div class="owl-nav-container">
+
+        </div>
+      </div>
+
+      <div class="carousel-container">
+        <div class="owl-carousel owl-theme">
+          <div class="item" id="item1">
+            <img src="Images/category-thumb-1.jpg" alt="img">
+            <p>Fruits & Veges</p>
+          </div>
+          <div class="item">
+            <img src="Images/category-thumb-2.jpg" alt="img">
+            <p>Breads & sweets</p>
+          </div>
+          <div class="item">
+            <img src="Images/category-thumb-3.jpg" alt="img">
+            <p>Fresh Juices</p>
+          </div>
+          <div class="item">
+            <img src="Images/category-thumb-4.jpg" alt="img">
+            <p>Beverages</p>
+          </div>
+          <div class="item">
+            <img src="Images/category-thumb-5.jpg" alt="img">
+            <p>Meat Products</p>
+          </div>
+          <div class="item">
+            <img src="Images/category-thumb-6.jpg" alt="img">
+            <p>Plants</p>
+          </div>
+          <div class="item">
+            <img src="Images/category-thumb-7.jpg" alt="img">
+            <p>Eggs</p>
+          </div>
+          <div class="item">
+            <img src="Images/category-thumb-8.jpg" alt="img">
+            <p>Breads & sweets</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+      $(document).ready(function () {
+        $('.owl-carousel').owlCarousel({
+          loop: true,
+          margin: 10,
+          nav: true,
+          responsive: {
+            0: {
+              items: 1
+            },
+            600: {
+              items: 3
+            },
+            1000: {
+              items: 5
+            }
+          }
+        });
+      });
+    </script>
+
+    <!-- owl carousel end -->
+    <div class="best-selling">
+      <h2 class="best">Best selling products</h2>
+      <button type="button" class="btn btn-success btn-set">View All</button>
+      <div class="main-products">
+
+        <div class="product">
+          <img src="Images/product-thumb-1.png" alt="">
+          <p>Whole Wheat Sandwich Bread</p>
+          <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <div class="star">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            (222)
+          </div>
+          <p class="price"> <span style="color: gray;">$24.00</span> $18.00 <span
+              style="border: 2px solid lightgray;">10%
+              OFF</span></p>
+        </div>
+
+        <div class="product">
+          <img src="Images/product-thumb-2.png" alt="">
+          <p class="price">Whole Grain Oatmeal</p>
+
+          <div class="star">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            (41)
+          </div>
+          <p class="price"> <span style="color: gray;">$24.00</span> $18.00 <span
+              style="border: 2px solid lightgray;">10%
+              OFF</span></p>
+        </div>
+
+        <div class="product">
+          <img src="Images/product-thumb-3.png" alt="">
+          <p>Sharp Cheddar Cheese Block</p>
+
+          <div class="star">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            (32)
+          </div>
+          <p class="price"> <span style="color: gray;">$24.00</span> $18.00 <span
+              style="border: 2px solid lightgray;">10%
+              OFF</span></p>
+        </div>
+
+        <div class="product">
+          <img src="Images/product-thumb-4.png" alt="">
+          <p>Organic Baby Spinach</p>
+
+          <div class="star">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            (222)
+          </div>
+          <p class="price"> <span style="color: gray ;">$24.00</span> <span style="border: 2px solid lightgray;">10%
+              OFF</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-products1">
+
+      <div class="product">
+        <img src="Images/product-thumb-5.png" alt="">
+        <p>Whole Wheat Sandwich Bread</p>
+        <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <div class="star">
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+          (222)
+        </div>
+        <p class="price"> <span style="color: gray;">$24.00</span> $18.00 <span style="border: 2px solid lightgray;">10%
+            OFF</span></p>
+      </div>
+
+      <div class="product">
+        <img src="Images/product-thumb-6.png" alt="">
+        <p class="price">Whole Grain Oatmeal</p>
+
+        <div class="star">
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+          (41)
+        </div>
+        <p class="price"> <span style="color: gray;">$24.00</span> $18.00 <span style="border: 2px solid lightgray;">10%
+            OFF</span></p>
+      </div>
+
+      <div class="product">
+        <img src="Images/product-thumb-7.png" alt="">
+        <p>Sharp Cheddar Cheese Block</p>
+
+        <div class="star">
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+          (32)
+        </div>
+        <p class="price"> <span style="color: gray;">$24.00</span> $18.00 <span style="border: 2px solid lightgray;">10%
+            OFF</span></p>
+      </div>
+
+      <div class="product">
+        <img src="Images/product-thumb-8.png" alt="">
+        <p>Organic Baby Spinach</p>
+
+        <div class="star">
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+          (222)
+        </div>
+        <p class="price"> <span style="color: gray ;">$24.00</span> <span style="border: 2px solid lightgray;">10%
+            OFF</span></p>
+      </div>
+    </div>
+
+    <div class="main-products1">
+
+      <div class="product">
+        <img src="Images/product-thumb-9.png" alt="">
+        <p>Whole Wheat Sandwich Bread</p>
+        <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <div class="star">
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+          (222)
+        </div>
+        <p class="price"> <span style="color: gray;">$24.00</span> $18.00 <span style="border: 2px solid lightgray;">10%
+            OFF</span></p>
+      </div>
+
+      <div class="product">
+        <img src="Images/product-thumb-10.png" alt="">
+        <p class="price">Whole Grain Oatmeal</p>
+
+        <div class="star">
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+          (41)
+        </div>
+        <p class="price"> <span style="color: gray;">$24.00</span> $18.00 <span style="border: 2px solid lightgray;">10%
+            OFF</span></p>
+      </div>
+
+    </div>
+    <!-- grid starts here -->
+    <!-- <div class="grid-container">
+      <div class="item item1">
+        <p class="ad-text-1 txt text-1">Items on SALE</p>
+        <p class="ad-text-2 txt">Discounts up to 30%</p>
+        <p class="ad-text-3 txt">Shop Now</p>
+      </div>
+      <div class="item item2">
+        <p class="ad-text-1 txt text-2">Combo offers</p>
+        <p class="ad-text-2 txt">Discounts up to 50%</p>
+        <p class="ad-text-3 txt">Shop Now</p>
+      </div>
+      <div class="item item3">
+        <p class="ad-text-1 txt text-2">Discount Coupons</p>
+        <p class="ad-text-2 txt">Discounts up to 40%</p>
+        <p class="ad-text-3 txt">Shop Now</p>
+      </div>
+    </div> -->
+    <!-- grid ends here -->
+
+    <!-- box carousel start -->
+    <div class="box">
+      <h1 class="Category">Featured Products</h1>
+      <button type="button" class="btn btn-success btn-set">View All</button>
+      <div class="owl-carousel owl-theme">
+        <div class="box-item" id="item1">
+          <img src="Images/product-thumb-10.png" alt="img">
+          <p>Whole Wheat Sandwich Bread</p>
+          <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <div class="box-star">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            (222)
+          </div>
+          <p class="price"> <span style="color: gray;">$24.00</span> $18.00 <span
+              style="border: 2px solid lightgray;">10%
+              OFF</span></p>
+
+        </div>
+        <div class="box-item">
+          <img src="Images/product-thumb-11.png" alt="img">
+          <p>Whole Wheat Sandwich Bread</p>
+          <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <div class="box-star">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            (222)
+          </div>
+          <p class="price"> <span style="color: gray;">$24.00</span> $18.00 <span
+              style="border: 2px solid lightgray;">10%
+              OFF</span></p>
+        </div>
+        <div class="box-item">
+          <img src="Images/product-thumb-12.png" alt="img">
+          <p>Whole Wheat Sandwich Bread</p>
+          <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <div class="box-star">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            (222)
+          </div>
+          <p class="price"> <span style="color: gray;">$24.00</span> $18.00 <span
+              style="border: 2px solid lightgray;">10%
+              OFF</span></p>
+        </div>
+        <div class="box-item">
+          <img src="Images/product-thumb-13.png" alt="img">
+          <p>Whole Wheat Sandwich Bread</p>
+          <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <div class="box-star">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            (222)
+          </div>
+          <p class="price"> <span style="color: gray;">$24.00</span> $18.00 <span
+              style="border: 2px solid lightgray;">10%
+              OFF</span></p>
+        </div>
+        <div class="box-item">
+          <img src="Images/product-thumb-14.png" alt="img">
+          <p>Whole Wheat Sandwich Bread</p>
+          <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <div class="box-star">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            (222)
+          </div>
+          <p class="price"> <span style="color: gray;">$24.00</span> $18.00 <span
+              style="border: 2px solid lightgray;">10%
+              OFF</span></p>
+        </div>
+        <div class="box-item">
+          <img src="Images/product-thumb-15.png" alt="img">
+          <p>Whole Wheat Sandwich Bread</p>
+          <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <div class="box-star">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            (222)
+          </div>
+          <p class="price"> <span style="color: gray;">$24.00</span> $18.00 <span
+              style="border: 2px solid lightgray;">10%
+              OFF</span></p>
+        </div>
+        <div class="box-item">
+          <img src="Images/product-thumb-16.png" alt="img">
+          <p>Whole Wheat Sandwich Bread</p>
+          <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <div class="box-star">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            (222)
+          </div>
+          <p class="price"> <span style="color: gray;">$24.00</span> $18.00 <span
+              style="border: 2px solid lightgray;">10%
+              OFF</span></p>
+        </div>
+        <div class="box-item">
+          <img src="Images/product-thumb-17.png" alt="img">
+          <p>Whole Wheat Sandwich Bread</p>
+          <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <div class="box-star">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            (222)
+          </div>
+          <p class="price"> <span style="color: gray;">$24.00</span> $18.00 <span
+              style="border: 2px solid lightgray;">10%
+              OFF</span></p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 3
+          },
+          1000: {
+            items: 4
+          }
+        }
+      })
+    </script>
+    <!-- box carousel end -->
+
+    <div class="leaves">
+      <img src="Images/banner-newsletter.jpg" alt="">
+      <div class="leave-text1">
+        <p>Get 25% Discount<br>
+          on your first<br>
+          purchase<br>
+          <span class="b1">Just Sign Up & Register it now to become member.</span>
+        </p>
+      </div>
+      <div class="leave-text2">
+        <input type="text" placeholder="Name"><br><br>
+        <input type="text" placeholder="Email Address"><br><br>
+        <div class="d-grid gap-2">
+          <button class="btn btn-dark" type="button">Button</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="box2 pt-1">
+      <h1 class="Category">Most Popular Products</h1>
+
+      <div class="owl-carousel owl-theme">
+        <div class="box-item" id="item1">
+          <img src="Images/product-thumb-15.png" alt="img">
+          <p>Whole Wheat Sandwich Bread</p>
+          <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <div class="box-star">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            (222)
+          </div>
+          <p class="price"> <span style="color: gray;">$24.00</span> $18.00 <span
+              style="border: 2px solid lightgray;">10%
+              OFF</span></p>
+
+        </div>
+        <div class="box-item tb-p" id="item1">
+          <img src="Images/product-thumb-16.png" alt="img">
+          <p>Whole Wheat Sandwich Bread</p>
+          <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <div class="box-star">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            (222)
+          </div>
+          <p class="price"> <span style="color: gray;">$24.00</span> $18.00 <span
+              style="border: 2px solid lightgray;">10%
+              OFF</span></p>
+
+        </div>
+
+        <div class="box-item tb-p" id="item1">
+          <img src="Images/product-thumb-17.png" alt="img">
+          <p>Whole Wheat Sandwich Bread</p>
+          <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <div class="box-star">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            (222)
+          </div>
+          <p class="price"> <span style="color: gray;">$24.00</span> $18.00 <span
+              style="border: 2px solid lightgray;">10%
+              OFF</span></p>
+
+        </div>
+        <div class="box-item">
+          <img src="Images/product-thumb-18.png" alt="img">
+          <p>Whole Wheat Sandwich Bread</p>
+          <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <div class="box-star">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            (222)
+          </div>
+          <p class="price"> <span style="color: gray;">$24.00</span> $18.00 <span
+              style="border: 2px solid lightgray;">10%
+              OFF</span></p>
+        </div>
+        <div class="box-item">
+          <img src="Images/product-thumb-19.png" alt="img">
+          <p>Whole Wheat Sandwich Bread</p>
+          <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <div class="box-star">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            (222)
+          </div>
+          <p class="price"> <span style="color: gray;">$24.00</span> $18.00 <span
+              style="border: 2px solid lightgray;">10%
+              OFF</span></p>
+        </div>
+        <div class="box-item">
+          <img src="Images/product-thumb-10.png" alt="img">
+          <p>Whole Wheat Sandwich Bread</p>
+          <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <div class="box-star">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            (222)
+          </div>
+          <p class="price"> <span style="color: gray;">$24.00</span> $18.00 <span
+              style="border: 2px solid lightgray;">10%
+              OFF</span></p>
+        </div>
+        <div class="box-item">
+          <img src="Images/product-thumb-11.png" alt="img">
+          <p>Whole Wheat Sandwich Bread</p>
+          <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <div class="box-star">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            (222)
+          </div>
+          <p class="price"> <span style="color: gray;">$24.00</span> $18.00 <span
+              style="border: 2px solid lightgray;">10%
+              OFF</span></p>
+        </div>
+        <div class="box-item">
+          <img src="Images/product-thumb-12.png" alt="img">
+          <p>Whole Wheat Sandwich Bread</p>
+          <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <div class="box-star">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            (222)
+          </div>
+          <p class="price"> <span style="color: gray;">$24.00</span> $18.00 <span
+              style="border: 2px solid lightgray;">10%
+              OFF</span></p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 3
+          },
+          1000: {
+            items: 4
+          }
+        }
+      })
+    </script>
+
+    <div class="box3 pt-4">
+      <h1 class="Category">Just Arrived</h1>
+
+      <div class="owl-carousel owl-theme">
+        <div class="box-item" id="item1">
+          <img src="Images/product-thumb-10.png" alt="img">
+          <p>Whole Wheat Sandwich Bread</p>
+          <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <div class="box-star">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            (222)
+          </div>
+          <p class="price"> <span style="color: gray;">$24.00</span> $18.00 <span
+              style="border: 2px solid lightgray;">10%
+              OFF</span></p>
+
+        </div>
+        <div class="box-item">
+          <img src="Images/product-thumb-11.png" alt="img">
+          <p>Whole Wheat Sandwich Bread</p>
+          <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <div class="box-star">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            (222)
+          </div>
+          <p class="price"> <span style="color: gray;">$24.00</span> $18.00 <span
+              style="border: 2px solid lightgray;">10%
+              OFF</span></p>
+        </div>
+        <div class="box-item">
+          <img src="Images/product-thumb-12.png" alt="img">
+          <p>Whole Wheat Sandwich Bread</p>
+          <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <div class="box-star">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            (222)
+          </div>
+          <p class="price"> <span style="color: gray;">$24.00</span> $18.00 <span
+              style="border: 2px solid lightgray;">10%
+              OFF</span></p>
+        </div>
+        <div class="box-item">
+          <img src="Images/product-thumb-13.png" alt="img">
+          <p>Whole Wheat Sandwich Bread</p>
+          <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <div class="box-star">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            (222)
+          </div>
+          <p class="price"> <span style="color: gray;">$24.00</span> $18.00 <span
+              style="border: 2px solid lightgray;">10%
+              OFF</span></p>
+        </div>
+        <div class="box-item">
+          <img src="Images/product-thumb-14.png" alt="img">
+          <p>Whole Wheat Sandwich Bread</p>
+          <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <div class="box-star">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            (222)
+          </div>
+          <p class="price"> <span style="color: gray;">$24.00</span> $18.00 <span
+              style="border: 2px solid lightgray;">10%
+              OFF</span></p>
+        </div>
+        <div class="box-item">
+          <img src="Images/product-thumb-15.png" alt="img">
+          <p>Whole Wheat Sandwich Bread</p>
+          <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <div class="box-star">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            (222)
+          </div>
+          <p class="price"> <span style="color: gray;">$24.00</span> $18.00 <span
+              style="border: 2px solid lightgray;">10%
+              OFF</span></p>
+        </div>
+        <div class="box-item">
+          <img src="Images/product-thumb-16.png" alt="img">
+          <p>Whole Wheat Sandwich Bread</p>
+          <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <div class="box-star">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            (222)
+          </div>
+          <p class="price"> <span style="color: gray;">$24.00</span> $18.00 <span
+              style="border: 2px solid lightgray;">10%
+              OFF</span></p>
+        </div>
+        <div class="box-item">
+          <img src="Images/product-thumb-17.png" alt="img">
+          <p>Whole Wheat Sandwich Bread</p>
+          <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <div class="box-star">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            (222)
+          </div>
+          <p class="price"> <span style="color: gray;">$24.00</span> $18.00 <span
+              style="border: 2px solid lightgray;">10%
+              OFF</span></p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 3
+          },
+          1000: {
+            items: 4
+          }
+        }
+      })
+    </script>
+    <div>
+      <h1 class="Category">Our Recent Blogs</h1>
+
+      <div class="footer1">
+
+        <div class="footer-img">
+          <img src="Images/post-thumbnail-1.jpg" alt="img">
+          <pre class="footer-heading">
+Top 10 casual look
+ideas to dress up
+your kids</pre>
+          <p>Lorem ipsum dolor sit amet<br>
+            consectetur adipisicing elit tenetur optio<br>
+            rerum, impedit libero iusto commodi? Asperiores<br>
+            rem aut quisquam reprehenderit.</p>
+        </div>
+        <div class="footer-img">
+          <img src="Images/post-thumbnail-2.jpg" alt="img">
+          <pre class="footer-heading">
+Latest trends of
+waring street  
+wears supremely</pre>
+          <p>Lorem ipsum dolor sit amet<br>
+            consectetur adipisicing elit tenetur optio<br>
+            rerum, impedit libero iusto commodi? Asperiores<br>
+            rem aut quisquam reprehenderit oh<br>
+            rem aut quisquam reprehenderit.</p>
+        </div>
+        <div class="footer-img">
+          <img src="Images/post-thumbnail-3.jpg" alt="img">
+          <pre class="footer-heading">
+10 Different Types
+of comfortable
+clothes ideas for
+women</pre>
+          <p>Lorem ipsum dolor sit amet<br>
+            consectetur adipisicing elit tenetur optio<br>
+            rerum, impedit libero iusto commodi? Asperiores<br>
+            rem aut quisquam reprehenderit oh<br>
+            rem aut quisquam reprehenderit.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-download">
+      <div class="download">
+        <p class="save">Download Organic<br>App</p>
+        <p class="save1">Online Orders made easy, fast and reliable</p>
+        <div class="download-images">
+          <a href="#">
+            <img src="Images/img-app-store.png" alt="app">
+          </a>
+          <br>
+          <a href="#">
+            <img src="Images/img-google-play.png" alt="google">
+          </a>
+        </div>
+        <div class="download-child2">
+          <img src="Images/banner-onlineapp.png" alt="crat">
+        </div>
+      </div>
+    </div>
+
+    <div class="main-looking">
+      <p>People are also looking for</p>
+      <div class="sub-main">
+        <ul class="looking">
+          <li class="li">Blue diamond alomonds</li>
+          <li class="li">Angie's Boomchickapop Corn</li>
+          <li class="li">Salty Kettle Corn</li>
+          <li class="li">Chobani Greek Yogurt</li>
+          <li class="li">Sweet Vanilla Yogurt</li>
+          <li class="li">Foster Farms Takeout Crispy wings</li>
+          <li class="li">Warrior Blend Organic</li>
+          <li class="li">Chao Cheese Creamy</li>
+          <li class="li">Chicken meatballs</li>
+          <li class="li">Blue diamond alomonds</li>
+          <li class="li">Angie's Boomchickapop Corn</li>
+          <li class="li">Salty Kettle Corn</li>
+          <li class="li">Chobani Greek Yogurt</li>
+          <li class="li">Sweet Vanilla Yogurt</li>
+          <li class="li">Foster Farms Takeout Crispy wings</li>
+          <li class="li">Warrior Blend Organic</li>
+          <li class="li">Chao Cheese Creamy</li>
+          <li class="li">Chicken meatballs</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="main-bx container">
+      <div class="bx-1 bx">
+        <img src="Images/Screenshot-1.png" alt="img">
+        <p class="Lorem-p1">Free delivery</p>
+        <p class="Lorem-p2">Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
+      </div>
+      <div class="bx-1 bx1">
+        <img src="Images/Screenshot-2.png" alt="img">
+        <p class="Lorem-p1">100% secure payment</p>
+        <p class="Lorem-p2">Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
+      </div>
+      <div class="bx-1 bx1">
+        <img src="Images/Screenshot-3.png" alt="img">
+        <p class="Lorem-p1">Quality guarantee</p>
+        <p class="Lorem-p2">Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
+      </div>
+      <div class="bx-1 bx1">
+        <img src="Images/Screenshot-4.png" alt="img">
+        <p class="Lorem-p1">Guaranteed savings</p>
+        <p class="Lorem-p2">Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
+      </div>
+      <div class="bx-1 bx">
+        <img src="Images/Screenshot-5.png" alt="img">
+        <p class="Lorem-p1">Daily offers</p>
+        <p class="Lorem-p2">Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
+      </div>
+    </div>
+
+    <!-- footer start -->
+    <div class="container">
+      <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 ">
+        <div class="col mb-3">
+          <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+            <svg class="bi me-2" width="40" height="32">
+              <use xlink:href="#bootstrap"></use>
+            </svg>
+          </a>
+          <div>
+            <img src="Images/organic logo.svg">
+            <i class="fa-brands fa-facebook-f" style="color: #959697;"></i>
+            <i class="fa-brands fa-square-twitter" style="color: #959697;"></i>
+            <i class="fa-brands fa-youtube" style="color: #959697;"></i>
+            <i class="fa-brands fa-instagram" style="color: #959697;"></i>
+            <i class="fa-brands fa-amazon" style="color: #959697;"></i>
+          </div>
+        </div>
+
+        <div class="col mb-3">
+
+        </div>
+
+        <div class="col mb-3">
+          <h5>Organic</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About us</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Conditions</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Our journals</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Creers</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Affiliate Programme</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Ultras Press</a></li>
+          </ul>
+        </div>
+
+
+
+        <div class="col mb-3">
+          <h5>Customer Service</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQ</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Contact</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Privacy Policy</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Returns & Refunds</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Cookies Guidelines</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Delivery information</a></li>
+          </ul>
+        </div>
+
+        <div class="col mb-3">
+          <h5>Subscribe Us</h5>
+          <p>Subscribe to our newsletter to get</p>
+          <p>Subscribe to our newsletter to get</p>
+        </div>
+      </footer>
+    </div>
+    <!-- footer end -->
+</body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</html>
